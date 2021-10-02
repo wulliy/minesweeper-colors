@@ -9,5 +9,6 @@ If you want to automatically run the script for whatever reason, you can save th
 
 Enjoy!
 
-![Dark theme](https://github.com/wulliy/minesweeper-colors/blob/main/minesweeper%20(1).jpg?raw=true)
-![Losing while having a Blue theme](https://github.com/wulliy/minesweeper-colors/blob/main/minesweeper%20(2).jpg?raw=true)
+![Dark theme](https://github.com/wulliy/minesweeper-colors/blob/main/images/minesweeper%20(1).jpg?raw=true)
+
+![Losing while having a Blue theme](https://github.com/wulliy/minesweeper-colors/blob/main/images/minesweeper%20(2).jpg?raw=true)
