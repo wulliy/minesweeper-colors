@@ -7,4 +7,7 @@ To use the script, you can first open up the console by pressing F12 or pressing
 
 If you want to automatically run the script for whatever reason, you can save the scripts as a userscript for [Tampermonkey](https://www.tampermonkey.net) or other userscript extenstions.
 
-Enjoy.
+Enjoy!
+
+![Dark theme](https://github.com/wulliy/minesweeper-colors/blob/main/minesweeper%20(1).jpg?raw=true)
+![Losing while having a Blue theme](https://github.com/wulliy/minesweeper-colors/blob/main/minesweeper%20(2).jpg?raw=true)
