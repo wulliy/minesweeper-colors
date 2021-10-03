@@ -3,7 +3,7 @@ Apply custom presets and themes to Google's Minesweeper.
 
 This script allows you to customize the colos of the game and even apply presets or add presets of your own or others.
 
-To use the script, you can first open up the console by pressing F12 or CTRL + Shift + I in order and clicking on the "Console" tab. Even better, you can directly press CTRL + Shirt + J in order to directly open up the console. Then, run the code from either `colors.js` or `colors.min.js`.
+To use the script, you can first open up the console by pressing F12 or CTRL + Shift + I in order and clicking on the "Console" tab. Even better, you can directly press CTRL + Shift + J in order to directly open up the console. Then, run the code from either `colors.js` or `colors.min.js`.
 
 If you want to quickly load up the script, you can save the code below as a [bookmarklet](https://www.google.com/search?q=bookmarklet).
 ```js
