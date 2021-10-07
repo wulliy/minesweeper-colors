@@ -97,7 +97,7 @@
 	            c = .62 * a.cellSize;
 	            a.context.font = "bold " + c + "pt Roboto";
 	            a.context.textAlign = "center";
-	            var d = a.oa[b.x][b.y].rI;
+	            var d = a.oa[b.x][b.y].sI;
 	            a.context.fillStyle = s_Cpd(a, s_Dpd[d - 1], 0 === (b.x + b.y) % 2 ? "#90CAF9" : "#83C4F7", b);
 	            a.context.fillText(d.toString(), b.x * a.cellSize + a.cellSize / 2, b.y * a.cellSize + c + (a.cellSize - c) / 2.1);
 	            break;
@@ -131,7 +131,7 @@
 	        a.context.arc(a.Ha.x, a.Ha.y, a.wb, 0, 2 * Math.PI, !1),
 	        a.context.fill(),
 	        b = 2.4 * a.wb,
-	        a.context.drawImage(a.Gw, a.Ha.x - b / 2, a.Ha.y - b / 2, b, b)),
+	        a.context.drawImage(a.Hw, a.Ha.x - b / 2, a.Ha.y - b / 2, b, b)),
 	        null !== a.Ma && (a.context.fillStyle = "#578A34",
 	        a.context.beginPath(),
 	        a.context.arc(a.Ma.x, a.Ma.y, a.wb, 0, 2 * Math.PI, !1),
@@ -171,5 +171,16 @@
 		WATER_LIGHT: "#90CAF9",
 	    NAVBAR_BG_COLOR: "#333333",
 	    TRY_AGAIN_BG_COLOR: "#333333"
+	})
+
+	window.minesweeper.presets.addPreset("desert", {
+		GRASS_DARK: "#D7BF51",
+		GRASS_LIGHT: "#D1B849",
+		DUG_DARK: "#D7B899",
+		DUG_LIGHT: "#E5C29F",
+		WATER_DARK: "#83C4F7",
+		WATER_LIGHT: "#90CAF9",
+		NAVBAR_BG_COLOR: "#D1B849",
+		TRY_AGAIN_BG_COLOR: "#D1B849"
 	})
 })()
