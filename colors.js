@@ -79,43 +79,43 @@
 	}
 
 	window.minesweeper.setColors = () => {
-		s_zpd = function(a, b, c) {
+		s_7pd = function(a, b, c) {
 			document.getElementById("NWJp1d").style.backgroundColor = window.minesweeper.colors.NAVBAR_BG_COLOR
 			document.getElementsByClassName("HhuoRb")[0].style.backgroundColor = window.minesweeper.colors.TRY_AGAIN_BG_COLOR
 
 	        switch (c) {
 	        case "GRASS":
 	            a.context.fillStyle = 0 === (b.x + b.y) % 2 ? window.minesweeper.colors.GRASS_DARK : window.minesweeper.colors.GRASS_LIGHT;
-	            s_Bpd(a, b);
+	            s_9pd(a, b);
 	            break;
 	        case "DUG":
-	            a.context.fillStyle = 0 === (b.x + b.y) % 2 ? s_Cpd(a, window.minesweeper.colors.DUG_LIGHT, window.minesweeper.colors.WATER_LIGHT, b) : s_Cpd(a, window.minesweeper.colors.DUG_DARK, window.minesweeper.colors.WATER_DARK, b);
-	            s_Bpd(a, b);
+	            a.context.fillStyle = 0 === (b.x + b.y) % 2 ? s_$pd(a, window.minesweeper.colors.DUG_LIGHT, window.minesweeper.colors.WATER_LIGHT, b) : s_$pd(a, window.minesweeper.colors.DUG_DARK, window.minesweeper.colors.WATER_DARK, b);
+	            s_9pd(a, b);
 	            break;
 	        case "ADJACENT":
-	            s_zpd(a, b, "DUG");
+	            s_7pd(a, b, "DUG");
 	            c = .62 * a.cellSize;
 	            a.context.font = "bold " + c + "pt Roboto";
 	            a.context.textAlign = "center";
-	            var d = a.oa[b.x][b.y].sI;
-	            a.context.fillStyle = s_Cpd(a, s_Dpd[d - 1], 0 === (b.x + b.y) % 2 ? "#90CAF9" : "#83C4F7", b);
+	            var d = a.oa[b.x][b.y].DI;
+	            a.context.fillStyle = s_$pd(a, s_aqd[d - 1], 0 === (b.x + b.y) % 2 ? "#90CAF9" : "#83C4F7", b);
 	            a.context.fillText(d.toString(), b.x * a.cellSize + a.cellSize / 2, b.y * a.cellSize + c + (a.cellSize - c) / 2.1);
 	            break;
 	        case "FLAG":
-	            s_zpd(a, b, "GRASS");
-	            a.Ps.render(Math.min(Math.floor(a.oa[b.x][b.y].JGa), 9), new s_jg(b.x * a.cellSize,b.y * a.cellSize), new s_jg(0,0), 0, a.cellSize / a.Ps.Qd());
+	            s_7pd(a, b, "GRASS");
+	            a.Ps.render(Math.min(Math.floor(a.oa[b.x][b.y].JGa), 9), new s_hg(b.x * a.cellSize,b.y * a.cellSize), new s_hg(0,0), 0, a.cellSize / a.Us.Qd());
 	            break;
 	        case "BAD_FLAG":
-	            s_zpd(a, b, "GRASS");
+	            s_7pd(a, b, "GRASS");
 	            a.context.drawImage(a.Ht, b.x * a.cellSize, b.y * a.cellSize, a.cellSize, a.cellSize);
 	            break;
 	        case "DETONATED_MINE":
 	            a.context.fillStyle = a.oa[b.x][b.y].color;
-	            s_Bpd(a, b);
-	            s_zpd(a, b, "MINE");
+	            s_9pd(a, b);
+	            s_7pd(a, b, "MINE");
 	            break;
 	        case "MINE":
-	            a.context.fillStyle = s_CC(a.oa[b.x][b.y].color, .35),
+	            a.context.fillStyle = s_IC(a.oa[b.x][b.y].color, .35),
 	            a.context.beginPath(),
 	            a.context.arc(b.x * a.cellSize + a.cellSize / 2, b.y * a.cellSize + a.cellSize / 2, a.cellSize / 4, 0, 2 * Math.PI, !1),
 	            a.context.fill()
@@ -147,6 +147,25 @@
 	        a.context.drawImage(a.Tr, a.Ga.x - b / 2, a.Ga.y - b / 2, b, b)),
 	        a.context.setTransform(1, 0, 0, 1, a.Ba.width, a.Ba.height))
 	    }
+
+	    if (!Object.keys(Array.prototype).includes("_push")) {
+	    	Array.prototype._push = Array.prototype.push
+		}
+
+		Array.prototype.push = function() {
+			if (typeof arguments[0] === "object" && !arguments[0]["tagName"]) {
+				if (arguments[0]["color"]) {
+					if (arguments[0]["color"] === "#AAD751" || arguments[0]["color"] === "#A2D149") {
+						if (Math.random() > .25) {
+							arguments[0]["color"] = minesweeper.colors.GRASS_LIGHT
+						} else {
+							arguments[0]["color"] = minesweeper.colors.GRASS_DARK
+						}
+					}
+				}
+			}
+			Array.prototype._push.apply(this, arguments)
+		}
 	}
 
 	// default presets
