@@ -23,7 +23,7 @@ Or, if you're using a bookmarklet to save the script, you might as well save thi
 
 ```js
 
-javascript:(()%3D%3E%7Bif(window.minesweeper)window.minesweeper.presets.applyPreset(%22dark%22)%7B()
+javascript:(()%3D%3E%7Bif(window.minesweeper)window.minesweeper.presets.applyPreset(%22dark%22)%7D)()
 
 ```
 
